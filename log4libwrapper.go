@@ -10,23 +10,23 @@ type logrusLoggerWrapper struct {
 }
 
 func (w *logrusLoggerWrapper) Info(args ...interface{}) {
-	w.delegate.Info(args)
+	w.delegate.Info(args...)
 }
 
 func (w *logrusLoggerWrapper) Warn(args ...interface{}) {
-	w.delegate.Warn(args)
+	w.delegate.Warn(args...)
 }
 
 func (w *logrusLoggerWrapper) Error(args ...interface{}) {
-	w.delegate.Error(args)
+	w.delegate.Error(args...)
 }
 
 func (w *logrusLoggerWrapper) Panic(args ...interface{}) {
-	w.delegate.Panic(args)
+	w.delegate.Panic(args...)
 }
 
 func (w *logrusLoggerWrapper) Fatal(args ...interface{}) {
-	w.delegate.Fatal(args)
+	w.delegate.Fatal(args...)
 }
 
 func (w *logrusLoggerWrapper) Infof(template string, args ...interface{}) {
@@ -34,19 +34,19 @@ func (w *logrusLoggerWrapper) Infof(template string, args ...interface{}) {
 }
 
 func (w *logrusLoggerWrapper) Warnf(template string, args ...interface{}) {
-	w.delegate.Warnf(template, args)
+	w.delegate.Warnf(template, args...)
 }
 
 func (w *logrusLoggerWrapper) Errorf(template string, args ...interface{}) {
-	w.delegate.Errorf(template, args)
+	w.delegate.Errorf(template, args...)
 }
 
 func (w *logrusLoggerWrapper) Panicf(template string, args ...interface{}) {
-	w.delegate.Panicf(template, args)
+	w.delegate.Panicf(template, args...)
 }
 
 func (w *logrusLoggerWrapper) Fatalf(template string, args ...interface{}) {
-	w.delegate.Fatalf(template, args)
+	w.delegate.Fatalf(template, args...)
 }
 
 func WrapLogrusLogger(pointerToLogger *logrus.Logger) log4lib.LibLogger {
